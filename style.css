@@ -14,7 +14,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.header-contain {
+.header {
   font-family: "Shrikhand", cursive;
   text-align: center;
   box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
@@ -23,7 +23,7 @@ body {
   position: relative; /*fait réapparaître la box shadow sur le header*/
 }
 
-.contain-location {
+.location {
   background-color: #eaeaea;
   display: flex;
   justify-content: center;
@@ -31,29 +31,29 @@ body {
   gap: 1rem;
 }
 
-.contain-location__h2 {
+.location__h2 {
   font-size: 1rem;
   font-weight: 500;
   padding: 1rem;
 }
 
-.contain-explorer {
+.explorer {
   margin-top: 2rem;
   text-align: center;
   padding: 1rem;
 }
-.contain-explorer__h2 {
+.explorer__h2 {
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.contain-explorer__text {
+.explorer__text {
   font-weight: 300;
   font-size: 1.12rem;
   padding-top: 1rem;
 }
 
-.contain-explorer .button {
+.explorer .button {
   margin-top: 1rem;
   color: white;
   border: none;

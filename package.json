@@ -1,0 +1,22 @@
+{
+  "name": "donnay_aurelie_projet_4_1122",
+  "version": "1.0.0",
+  "description": "Projet 4 OpenClassrooms Oh My Food",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arts286611/Donnay_Aurelie_projet_4_ohmyfood_112022.git"
+  },
+  "author": "Aurélie Donnay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arts286611/Donnay_Aurelie_projet_4_ohmyfood_112022/issues"
+  },
+  "homepage": "https://github.com/Arts286611/Donnay_Aurelie_projet_4_ohmyfood_112022#readme",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}

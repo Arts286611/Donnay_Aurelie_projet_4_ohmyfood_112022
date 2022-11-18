@@ -1,0 +1,12 @@
+.location {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  & h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+  }
+}

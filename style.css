@@ -1,15 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
-/**, 
-::before,
-::after {
-  box-sizing:border-box;
-}* pourquoi mettre before et after */
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -30,8 +27,7 @@ body {
   align-items: center;
   gap: 1rem;
 }
-
-.location__h2 {
+.location h2 {
   font-size: 1rem;
   font-weight: 500;
   padding: 1rem;
@@ -42,39 +38,33 @@ body {
   text-align: center;
   padding: 1rem;
 }
-
-.explorer__h2 {
+.explorer .explorer__h2 {
   font-size: 1.5rem;
   font-weight: 700;
 }
-
-.explorer__text {
+.explorer .explorer__text {
   font-weight: 300;
   font-size: 1.12rem;
   padding-top: 1rem;
 }
 
-.explorer .button {
+.button {
   margin-top: 1rem;
   color: white;
   border: none;
   border-radius: 2rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   font-weight: 500;
   font-size: 1rem;
+  box-shadow: 0.12rem 0.06rem 0.5rem -0.18rem rgba(0, 0, 0, 0.25);
 }
 
 .button-gradient {
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
-
 .button-gradient:hover {
   transform: scale(1.02);
-  opacity: 0.8;
-}
-
-.location {
-  background-color: blue;
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=style.css.map */

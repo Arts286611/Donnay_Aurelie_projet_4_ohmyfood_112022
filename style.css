@@ -11,6 +11,16 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.m-1rem {
+  margin: 1rem;
+}
+
 .header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -46,6 +56,29 @@ body {
   font-weight: 300;
   font-size: 1.12rem;
   padding-top: 1rem;
+}
+
+.tuto ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (min-width: 900px) {
+  .tuto ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.tuto li {
+  background-color: #f7f7f7;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+  border-radius: 1.25rem;
+  box-shadow: 0.12rem 0.06rem 0.5rem -0.18rem rgba(0, 0, 0, 0.25);
+}
+.tuto li:hover {
+  transform: scale(1.02);
 }
 
 .button {

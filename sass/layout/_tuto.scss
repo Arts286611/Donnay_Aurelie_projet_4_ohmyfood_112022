@@ -1,0 +1,25 @@
+@import "../utils/box-shadow.scss";
+@import"../utils/animationHover.scss";
+
+.tuto {
+  & ul {
+    display:flex;//anticipé pour la version desktop//
+    flex-direction: column;
+    gap:0.5rem;//espace entre element//
+    @media (min-width:900px) {
+      flex-direction:row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  & li {
+    background-color: #f7f7f7;
+    padding: 1rem 2rem;
+    flex-grow:1;
+    border-radius: 1.25rem;
+    @include box-shadow;
+    &:hover {
+      @include animationHover;
+    }
+  }
+}

@@ -1,25 +1,53 @@
-@import "../utils/box-shadow.scss";
-@import"../utils/animationHover.scss";
+@use "../utils/box-shadow.scss";
+@use"../utils/animationHover.scss";
+@use"../utils/colors.scss";
+@use"../utils/variables.scss";
+
+
 
 .tuto {
-  & ul {
+  counter-reset: steps;
+  & ol {
     display:flex;//anticipé pour la version desktop//
     flex-direction: column;
-    gap:0.5rem;//espace entre element//
+    margin:1rem;
+    gap:1rem;
+    //espace entre element
     @media (min-width:900px) {
       flex-direction:row;
       justify-content: center;
       align-items: center;
+      gap:3rem;
     }
   }
   & li {
-    background-color: #f7f7f7;
-    padding: 1rem 2rem;
-    flex-grow:1;
+    position:relative;
+    &::before {
+      content:counter(steps);
+      counter-increment:steps;
+      color: #fff;
+      background-color:colors.$color-primary;
+      width:2 * variables.$bullet-number-height;
+      height:2 * variables.$bullet-number-height;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      position:absolute;
+      left:- 1 * variables.$bullet-number-height;
+      bottom:variables.$bullet-number-height;
+    }//intégrer les chiffres
+    background-color: colors.$color-light-grey;
+    padding: 0.5rem 1rem;
     border-radius: 1.25rem;
-    @include box-shadow;
+    @include box-shadow.box-shadow;
     &:hover {
-      @include animationHover;
+      @include animationHover.animationHover;
+      cursor:pointer;
+      background-color:#F5EDFF;
+    }
+    & i.fas {
+      color: colors.$color-grey;
+      padding:1rem;
     }
   }
 }

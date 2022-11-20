@@ -58,27 +58,52 @@ h2 {
   padding-top: 1rem;
 }
 
-.tuto ul {
+.tuto {
+  counter-reset: steps;
+}
+.tuto ol {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  margin: 1rem;
+  gap: 1rem;
 }
 @media (min-width: 900px) {
-  .tuto ul {
+  .tuto ol {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
   }
 }
 .tuto li {
+  position: relative;
   background-color: #f7f7f7;
-  padding: 1rem 2rem;
-  flex-grow: 1;
+  padding: 0.5rem 1rem;
   border-radius: 1.25rem;
   box-shadow: 0.12rem 0.06rem 0.5rem -0.18rem rgba(0, 0, 0, 0.25);
 }
+.tuto li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: #fff;
+  background-color: #9356DC;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  left: -1rem;
+  bottom: 1rem;
+}
 .tuto li:hover {
   transform: scale(1.02);
+  cursor: pointer;
+  background-color: #F5EDFF;
+}
+.tuto li i.fas {
+  color: #7e7e7e;
+  padding: 1rem;
 }
 
 .button {

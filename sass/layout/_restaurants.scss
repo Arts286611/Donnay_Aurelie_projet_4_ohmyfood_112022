@@ -1,0 +1,84 @@
+@use"../utils/colors.scss";
+@use "../utils/box-shadow.scss";
+
+
+.restaurants{
+  background-color: colors.$color-light-grey;
+  h2 {
+    margin-bottom:2rem;
+  }
+  .restaurants__cards{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+    @media (min-width:900px) {
+      flex-direction: row;
+    }
+  }
+
+.card{
+  @include box-shadow.box-shadow;
+  border-radius:2rem;
+  background-color: white;
+  margin: 0 1rem;
+  &__img {
+    background-size: cover;
+    border-radius:2rem;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+    height:12rem;
+    min-width:20rem;
+  }
+  &__img1{
+    background-image: url("../../assets/restaurants/menu1.jpg");
+  }
+  &__img2{
+    background-image: url("../../assets/restaurants/menu2.jpg");
+  }
+  &__img3{
+    background-image: url("../../assets/restaurants/menu3.jpg");
+  }
+  &__img4{
+    background-image: url("../../assets/restaurants/menu4.jpg");
+  }
+  //@at-root $i from 1 through 4 {
+   ////  background-image: url("../../assets/restaurants/menu#{$i}.jpg");
+    }
+    .new {
+      position:relative;
+    }
+    .new::before {
+      content:"Nouveau";
+      display:grid;
+      place-items: center;
+      position: absolute;
+      color: darken(colors.$color-tertiary, 80%);
+       background-color:colors.$color-tertiary;
+       border-radius:0.12rem;
+       width:5rem;
+       height:2rem;
+       right:2rem;
+       top:1rem;
+       @include box-shadow.box-shadow;
+    }
+
+    .card__description {
+      position:relative;
+      h3,
+       p{
+        margin:0.5rem;
+        padding: 0.3rem 0.5rem;
+       // padding:1rem 0 .05rem 1rem;
+       }
+
+       i {
+        font-size: 1.2rem;
+        position:absolute;
+        right:1rem;
+        top:50%;
+        transform: translateY(-50%);
+       }
+     }
+}
+  
+

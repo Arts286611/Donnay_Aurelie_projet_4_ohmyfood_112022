@@ -13,12 +13,20 @@ body {
 
 h2 {
   font-size: 1rem;
-  font-weight: 500;
   padding: 1rem;
 }
 
 .m-1rem {
   margin: 1rem;
+}
+
+h2,
+h3 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 300;
 }
 
 .header {
@@ -104,6 +112,81 @@ h2 {
 .tuto li i.fas {
   color: #7e7e7e;
   padding: 1rem;
+}
+
+.restaurants {
+  background-color: #f7f7f7;
+}
+.restaurants h2 {
+  margin-bottom: 2rem;
+}
+.restaurants .restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 900px) {
+  .restaurants .restaurants__cards {
+    flex-direction: row;
+  }
+}
+.restaurants .card {
+  box-shadow: 0.12rem 0.06rem 0.5rem -0.18rem rgba(0, 0, 0, 0.25);
+  border-radius: 2rem;
+  background-color: white;
+  margin: 0 1rem;
+}
+.restaurants .card__img {
+  background-size: cover;
+  border-radius: 2rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 12rem;
+  min-width: 20rem;
+}
+.restaurants .card__img1 {
+  background-image: url("../../assets/restaurants/menu1.jpg");
+}
+.restaurants .card__img2 {
+  background-image: url("../../assets/restaurants/menu2.jpg");
+}
+.restaurants .card__img3 {
+  background-image: url("../../assets/restaurants/menu3.jpg");
+}
+.restaurants .card__img4 {
+  background-image: url("../../assets/restaurants/menu4.jpg");
+}
+.restaurants .new {
+  position: relative;
+}
+.restaurants .new::before {
+  content: "Nouveau";
+  display: grid;
+  place-items: center;
+  position: absolute;
+  color: black;
+  background-color: #99e2d0;
+  border-radius: 0.12rem;
+  width: 5rem;
+  height: 2rem;
+  right: 2rem;
+  top: 1rem;
+  box-shadow: 0.12rem 0.06rem 0.5rem -0.18rem rgba(0, 0, 0, 0.25);
+}
+.restaurants .card__description {
+  position: relative;
+}
+.restaurants .card__description h3,
+.restaurants .card__description p {
+  margin: 0.5rem;
+  padding: 0.3rem 0.5rem;
+}
+.restaurants .card__description i {
+  font-size: 1.2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .button {

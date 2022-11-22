@@ -1,5 +1,6 @@
 @use "../utils/box-shadow";
 @use "../utils/colors";
+@use  "../utils/mixin";
 
 .button {
   margin-top: 1rem;
@@ -12,7 +13,7 @@
  @include box-shadow.box-shadow;
 }
 .button-gradient {
-  background-image: colors.$linear-gradient;
+  @include mixin.gradient (0.9);
     &:hover {
       transform: scale(1.02);
       opacity: 0.7;

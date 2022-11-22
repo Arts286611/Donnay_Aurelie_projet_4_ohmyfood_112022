@@ -188,6 +188,18 @@ p {
   top: 50%;
   transform: translateY(-50%);
 }
+.restaurants .card__description .fas {
+  color: transparent;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms easy-in-out;
+}
+.restaurants .card__description:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.3);
+}
 
 footer {
   background-color: #353535;

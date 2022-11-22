@@ -189,6 +189,22 @@ p {
   transform: translateY(-50%);
 }
 
+footer {
+  background-color: #353535;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+}
+footer h2, footer p {
+  color: white;
+}
+footer h2, footer p {
+  padding: 0.3rem;
+}
+
 .button {
   margin-top: 1rem;
   color: white;

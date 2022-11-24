@@ -1,5 +1,4 @@
-@use "../utils/box-shadow.scss";
-@use"../utils/animationHover.scss";
+@use "../utils/mixin.scss";
 @use"../utils/colors.scss";
 @use"../utils/variables.scss";
 
@@ -39,9 +38,9 @@
     background-color: colors.$color-light-grey;
     padding: 0.5rem 1rem;
     border-radius: 1.25rem;
-    @include box-shadow.box-shadow;
+    @include mixin.box-shadow;
     &:hover {
-      @include animationHover.animationHover;
+      @include mixin.animationHover;
       cursor:pointer;
       background-color:#F5EDFF;
     }

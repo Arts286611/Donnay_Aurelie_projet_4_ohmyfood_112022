@@ -1,8 +1,22 @@
-.header {
+@use "../utils/mixin";
+
+header {
   font-family: "Shrikhand", cursive;
   text-align: center;
   box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
-  font-size: 1.87rem;
-  padding: 0.5rem;
+  font-size: 1.5rem;
+  padding: 0.8rem;
   position: relative; /*fait réapparaître la box shadow sur le header*/
+}
+
+
+
+
+.header-menu::before{
+  @include mixin.font-awesome($font-weight:900);
+  content:"\f060";
+  position:absolute;
+  left:2rem;
+  top:50%;
+  transform: translateY(-50%);
 }

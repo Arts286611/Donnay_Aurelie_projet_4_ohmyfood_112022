@@ -1,20 +1,13 @@
 @use "../utils/colors";
 @use  "../utils/mixin";
 
+
 .button {
-  margin-top: 1rem;
-  color: white;
-  border: none;
-  border-radius: 2rem;
-  padding: 1rem 1rem;
-  font-weight: 500;
-  font-size: 1rem;
+ @include mixin.base-button;
  @include mixin.box-shadow;
-}
-.button-gradient {
-  @include mixin.gradient (0.9);
+ @include mixin.gradient(1);
     &:hover {
-      transform: scale(1.02);
-      opacity: 0.7;
+      @include mixin.gradient (0.7);
+      @include mixin.animationHover;
     }
 }

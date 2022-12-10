@@ -1,0 +1,134 @@
+@use "../utils/mixin";
+@use "../utils/colors";
+@use "../composants/button";
+@use "../utils/animations";
+
+
+
+
+.banniere img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  @media (min-width: 900px) {
+    height: 70vh;
+  }
+}
+
+h1 {
+  @media (min-width: 900px) {
+    font-size: 2.31rem;
+  }
+}
+
+.menus__flex {
+  background: colors.$color-light-grey;
+  @media (min-width: 900px) {
+    width: 1055px;
+    margin: auto;
+  }
+  .menus__flex-title {
+    margin-top: -2rem;
+    h2 {
+      font-family: "Shrikhand", "Cursive";
+      @include mixin.heart-animated;
+      border-radius: 2.5rem 2.5rem 0 0;
+      background: colors.$color-light-grey;
+      @media (min-width: 900px) {
+        text-align: center;
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  .menus {
+    @media (min-width: 900px) {
+      margin: 0 9.37rem;
+    }
+    & h3 {
+      padding-left: 1.4rem;
+    }
+  }
+  & h3 {
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 2rem 0 0.5rem 0;
+    position: relative;
+    &::after {
+      content: "";
+      height: 0.25rem;
+      width: 2.5rem;
+      background-color: colors.$color-tertiary;
+      position: absolute;
+      top: 1.1rem;
+      left: 1.4rem;
+    }
+  }
+  .menu-item {
+    display: flex;
+    overflow: hidden; //cache le survol de check
+    border-radius: 0.94rem;
+    margin: 1rem;
+    @include mixin.box-shadow;
+    background-color: white;
+    & h4 {
+      padding-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    &:hover {
+      .menu-item__check {
+        margin-right: 0;
+      }
+      & .fa-check {
+        @include animations.rotate-check;
+        animation: rotate-check 500ms ease-in-out;
+      }
+    }
+  }
+  & .menu-item__description {
+    padding: 1rem;
+    overflow: hidden;
+    //gère le texte évite d'agrandir la carte et déformer le check
+    h4,
+    p {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  & .menu-item__price {
+    display: flex;
+    align-items: flex-end; //la span permet de pouvoir mettre le prix en bas
+    margin-left: auto;
+    font-weight: 500;
+    padding: 1rem;
+  }
+
+  & .menu-item__check {
+    $check-width: 4rem; //gère la argeur du check, même taille que la marge
+    border-radius: 0 0.94rem 0.94rem 0;
+    background-color: colors.$color-tertiary;
+    margin-right: -1 * $check-width;
+   min-width: $check-width;
+   max-width: $check-width;
+transition: margin-right 300ms;
+    display: grid;
+    place-items: center;
+    & i {
+      color: colors.$color-tertiary;
+      background-color: white;
+      border-radius: 30rem;
+      padding: 0.2rem;
+    }
+  }
+}
+
+.commander {
+  display: flex;
+  justify-content: center;
+  padding-bottom:2rem ;
+  
+  //centre le bouton commande
+ 
+}

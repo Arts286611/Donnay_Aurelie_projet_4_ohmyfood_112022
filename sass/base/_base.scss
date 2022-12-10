@@ -14,8 +14,9 @@ body {
 
 h2 {
   font-size: 1rem;
-  padding: 1rem;
+ padding: 1rem  0 0 1.2rem;
 }
+
 .m-1rem {
   margin:1rem;
 }
@@ -23,7 +24,9 @@ h2 {
 h2, 
 h3 {
   font-weight: 500;
+  //margin-top:0.5rem;
 }
 p {
   font-weight:300;
 }
+

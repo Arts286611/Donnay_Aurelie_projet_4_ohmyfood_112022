@@ -11,12 +11,17 @@ header {
 
 
 
-
-.header-menu::before{
+.header-menu {
+  &:hover::before {
+    @include mixin.animationHover($zoom:1.20, $transformation: translateY(-50%));
+  }
+  &::before{
   @include mixin.font-awesome($font-weight:900);
   content:"\f060";
   position:absolute;
   left:2rem;
   top:50%;
   transform: translateY(-50%);
+  transition:transform 200ms ease-in-out;
+ }
 }

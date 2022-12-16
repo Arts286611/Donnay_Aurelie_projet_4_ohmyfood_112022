@@ -44,7 +44,7 @@
       padding:1rem;
     }
     &:hover {
-      @include mixin.animationHover;
+      @include mixin.animationHover($zoom:1.02, $transformation: translateY(0%));
       cursor:pointer;
       background-color:#F5EDFF;
       & i.fas{

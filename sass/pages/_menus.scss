@@ -64,13 +64,23 @@ h1 {
       left: 1.4rem;
     }
   }
+  .menu__categorie {
+
+  }
   .menu-item {
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-delay: 100ms * $i; 
+      } //animation des menus, ordre dans lequel arrive les menus
+  }
     display: flex;
     overflow: hidden; //cache le survol de check
     border-radius: 0.94rem;
     margin: 1rem;
     @include mixin.box-shadow;
     background-color: white;
+    animation: pop-menu 700ms;
+    animation-fill-mode: both;
     & h4 {
       padding-bottom: 0.5rem;
       font-weight: 500;
@@ -81,7 +91,7 @@ h1 {
       }
       & .fa-check {
         @include animations.rotate-check;
-        animation: rotate-check 500ms ease-in-out;
+        animation: rotate-check 200ms ease-in-out;
       }
     }
   }

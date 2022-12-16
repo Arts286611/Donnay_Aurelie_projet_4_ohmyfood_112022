@@ -64,9 +64,7 @@ h1 {
       left: 1.4rem;
     }
   }
-  .menu__categorie {
-
-  }
+  
   .menu-item {
     @for $i from 1 through 4 {
       &:nth-child(#{$i}) {

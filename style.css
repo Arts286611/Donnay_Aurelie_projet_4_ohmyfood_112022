@@ -99,7 +99,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
   }
 }
 .tuto li {
@@ -149,7 +149,7 @@ header {
   gap: 2rem;
   margin-bottom: 5rem;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .restaurants .restaurants__cards {
     flex-direction: row;
     flex-wrap: wrap;
@@ -172,15 +172,19 @@ header {
 }
 .restaurants .card__img1 {
   background-image: url("assets/restaurants/menu1.jpg");
+  background-position: center;
 }
 .restaurants .card__img2 {
   background-image: url("assets/restaurants/menu2.jpg");
+  background-position: center;
 }
 .restaurants .card__img3 {
   background-image: url("assets/restaurants/menu3.jpg");
+  background-position: center;
 }
 .restaurants .card__img4 {
   background-image: url("assets/restaurants/menu4.jpg");
+  background-position: center;
 }
 .restaurants .new {
   position: relative;
@@ -294,7 +298,8 @@ footer i {
 }
 .button:hover {
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.7), rgba(255, 121, 218, 0.7));
-  transform: 0% scale(1.02);
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 @keyframes pop-menu {
@@ -495,36 +500,41 @@ footer i {
   padding-bottom: 2rem;
 }
 
-/*.loader {
-  position:fixed; 
-  background-color: rgb(249, 249, 249);
-  height:100vh;
-  inset:0;
-  z-index:1;
-  opacity:0.9;
-  animation:transparent 200ms 3s both;
-  transform-origin:top left;
-  i {
-    display:grid;
-    place-items: center;
-    animation:spin 3s;
-  }
-
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: transparent 200ms 3s both;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 5rem;
+  width: 5rem;
+  border-top: 5px solid #9356DC;
+  border-right: 5px solid #9356DC;
+  border-radius: 50%;
+  animation: spin 1s infinite ease-in-out;
+  animation-iteration-count: 3;
 }
 
 @keyframes transparent {
   from {
-    transform:scale(1);
+    transform: scale(1);
   }
   to {
-    transform: scale(0); 
+    transform: scale(0);
   }
 }
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
-}*/
+}
 
 /*# sourceMappingURL=style.css.map */

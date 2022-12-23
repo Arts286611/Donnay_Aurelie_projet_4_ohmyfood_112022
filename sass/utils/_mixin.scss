@@ -14,7 +14,7 @@
 	-webkit-text-fill-color: transparent;
 }
 
-@mixin animationHover($zoom:1.02, $transformation:0%) {
+@mixin animationHover($zoom:1.02, $transformation:null) {
   transform: $transformation scale($zoom);//sur le tuto 
   //rajouté pour faire grossir la flèche de retour,  transformation ne sert que pour faire translate la flèche qui se deplace sinon
 }

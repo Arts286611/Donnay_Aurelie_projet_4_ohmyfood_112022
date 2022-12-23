@@ -9,5 +9,6 @@
     &:hover {
       @include mixin.gradient (0.7);
       @include mixin.animationHover;
+      cursor:pointer;
     }
 }

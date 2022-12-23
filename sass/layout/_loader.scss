@@ -1,20 +1,28 @@
 @use"../utils/colors.scss";
 
-/*.loader {
+.loader {
+  $animation-duration:1s;
+  $animation-count:3;
   position:fixed; 
-  background-color: rgb(249, 249, 249);
+  display:grid;
+  place-items:center;
+  background-color: rgb(255, 255, 255);
   height:100vh;
   inset:0;
   z-index:1;
   opacity:0.9;
-  animation:transparent 200ms 3s both;
-  transform-origin:top left;
-  i {
-    display:grid;
-    place-items: center;
-    animation:spin 3s;
+  animation:transparent 200ms $animation-duration * $animation-count both;
+  transform-origin:top;
+  &::after{
+    content:"";
+    height:5rem;
+    width:5rem;
+    border-top:5px solid colors.$color-primary;
+    border-right:5px solid colors.$color-primary;
+    border-radius: 50%;
+    animation: spin $animation-duration infinite ease-in-out;
+    animation-iteration-count: $animation-count;
   }
-
 }
 
 @keyframes transparent {
@@ -30,4 +38,4 @@
   to {
     transform: rotate(360deg);
   }
-}*/
+}

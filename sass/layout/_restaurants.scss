@@ -12,7 +12,7 @@
     flex-direction:column;
     gap:2rem;
     margin-bottom:5rem;
-    @media (min-width:1000px) {
+    @media (min-width:900px) {
       flex-direction: row;
       flex-wrap:wrap; 
       justify-content: center;
@@ -34,15 +34,19 @@
   }
   &__img1{
     background-image: url("assets/restaurants/menu1.jpg");
+    background-position:center;
   }
   &__img2{
     background-image: url("assets/restaurants/menu2.jpg");
+    background-position:center;
   }
   &__img3{
     background-image: url("assets/restaurants/menu3.jpg");
+    background-position:center;
   }
   &__img4{
     background-image: url("assets/restaurants/menu4.jpg");
+    background-position:center;
   }
   //@at-root $i from 1 through 4 {
    ////  background-image: url("../../assets/restaurants/menu#{$i}.jpg");

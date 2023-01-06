@@ -113,7 +113,7 @@ header {
   content: counter(steps);
   counter-increment: steps;
   color: #fff;
-  background-color: #9356DC;
+  background-color: #9356dc;
   width: 2rem;
   height: 2rem;
   display: grid;
@@ -130,10 +130,10 @@ header {
 .tuto li:hover {
   transform: translateY(0%) scale(1.02);
   cursor: pointer;
-  background-color: #F5EDFF;
+  background-color: #f5edff;
 }
 .tuto li:hover i.fas {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .restaurants {
@@ -168,7 +168,11 @@ header {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   height: 12rem;
-  min-width: 20rem;
+}
+@media (min-width: 900px) {
+  .restaurants .card__img {
+    min-width: 20rem;
+  }
 }
 .restaurants .card__img1 {
   background-image: url("assets/restaurants/menu1.jpg");
@@ -222,7 +226,7 @@ header {
   color: inherit;
   background-clip: text;
   opacity: 1;
-  transition: all 200ms ease-in-out;
+  transition: all 2000ms ease-in-out;
 }
 .restaurants .card__description::after {
   position: absolute;
@@ -240,8 +244,12 @@ header {
   color: transparent;
   background-clip: text;
   opacity: 0;
-  transition: all 200ms ease-in-out;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  transition: all 2000ms ease-in-out;
+  background-image: linear-gradient(
+    to top,
+    rgb(147, 86, 220),
+    rgb(255, 121, 218)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -249,6 +257,7 @@ header {
 .restaurants .card__description:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.2);
+  transition: all 2000ms ease-in-out;
 }
 .restaurants .card__description h3 {
   padding: 0.5rem 0 0 1rem;
@@ -275,7 +284,8 @@ footer h2 {
   order: 5;
   padding-top: 1.5rem;
 }
-footer h2, footer p {
+footer h2,
+footer p {
   color: white;
   padding: 0.4rem 0 0.2rem 0.3rem;
 }
@@ -292,12 +302,24 @@ footer i {
   font-weight: 500;
   font-size: 1rem;
   box-shadow: 0.12rem 0.06rem 0.5rem -0.18rem rgba(0, 0, 0, 0.25);
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-image: linear-gradient(
+    to top,
+    rgb(147, 86, 220),
+    rgb(255, 121, 218)
+  );
   box-shadow: 0.12rem 0.06rem 0.5rem -0.18rem rgba(0, 0, 0, 0.25);
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-image: linear-gradient(
+    to top,
+    rgb(147, 86, 220),
+    rgb(255, 121, 218)
+  );
 }
 .button:hover {
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.7), rgba(255, 121, 218, 0.7));
+  background-image: linear-gradient(
+    to top,
+    rgba(147, 86, 220, 0.7),
+    rgba(255, 121, 218, 0.7)
+  );
   transform: scale(1.02);
   cursor: pointer;
 }
@@ -359,11 +381,17 @@ footer i {
   font-size: 1.2rem;
   right: 1rem;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-25%);
   color: inherit;
   background-clip: text;
   opacity: 1;
-  transition: all 200ms ease-in-out;
+  transition: all 2000ms ease-in-out;
+}
+@media (min-width: 900px) {
+  .menus__flex .menus__flex-title h2::before {
+    right: 20rem;
+    font-size: 1.6rem;
+  }
 }
 .menus__flex .menus__flex-title h2::after {
   position: absolute;
@@ -377,19 +405,30 @@ footer i {
   font-size: 1.2rem;
   right: 1rem;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-25%);
   color: transparent;
   background-clip: text;
   opacity: 0;
-  transition: all 200ms ease-in-out;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  transition: all 2000ms ease-in-out;
+  background-image: linear-gradient(
+    to top,
+    rgb(147, 86, 220),
+    rgb(255, 121, 218)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (min-width: 900px) {
+  .menus__flex .menus__flex-title h2::after {
+    right: 20rem;
+    font-size: 1.6rem;
+  }
+}
 .menus__flex .menus__flex-title h2:hover::after {
   opacity: 1;
-  transform: translateY(-50%) scale(1.2);
+  transform: translateY(-25%) scale(1.2);
+  transition: all 2000ms ease-in-out;
 }
 @media (min-width: 900px) {
   .menus__flex .menus__flex-title h2 {
@@ -516,8 +555,8 @@ footer i {
   content: "";
   height: 5rem;
   width: 5rem;
-  border-top: 5px solid #9356DC;
-  border-right: 5px solid #9356DC;
+  border-top: 5px solid #9356dc;
+  border-right: 5px solid #9356dc;
   border-radius: 50%;
   animation: spin 1s infinite ease-in-out;
   animation-iteration-count: 3;

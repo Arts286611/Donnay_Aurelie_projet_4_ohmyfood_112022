@@ -55,9 +55,10 @@
   color:$color;
   background-clip:text;
   opacity:$opacity;
-  transition:all 200ms ease-in-out;
+  transition:all 2000ms ease-in-out;
 
 }
+
 
 
 @mixin heart-animated {
@@ -73,5 +74,43 @@
         &:hover::after {
           opacity: 1;
           transform:translateY(-50%) scale(1.2);
+          transition: all 2000ms ease-in-out;
+        }
+       }
+
+
+ @mixin heart-menu ($opacity: 1 , $font-weight: 400, $color: inherit)
+{
+  @include font-awesome ($font-weight);
+  content:"\f004";
+  font-size:1.2rem;
+  right:1rem;
+  top:50%;
+  transform: translateY(-25%);
+  color:$color;
+  background-clip:text;
+  opacity:$opacity;
+  transition:all 2000ms ease-in-out;
+  @media (min-width: 900px) {
+    right:20rem;
+    font-size:1.6rem;
+}
+}
+
+@mixin heart-animated-menu{
+  position:relative; 
+         &::before {
+          @include heart-menu;
+         }
+        &::after {
+          @include heart-menu ($opacity:0, $font-weight:900, $color: transparent);
+          //gère l'apparition de la couleur sur le coeur
+          @include gradient-heart(1);
+        }
+        &:hover::after {
+          opacity: 1;
+          transform:translateY(-25%) scale(1.2);
+          transition: all 2000ms ease-in-out;
+          
         }
        }

@@ -31,13 +31,14 @@ h1 {
     margin-top: -2rem;
     h2 {
       font-family: "Shrikhand", "Cursive";
-      @include mixin.heart-animated;
+      @include mixin.heart-animated-menu;
       border-radius: 2.5rem 2.5rem 0 0;
       background: colors.$color-light-grey;
       @media (min-width: 900px) {
         text-align: center;
         font-size: 1.75rem;
       }
+
     }
   }
 
